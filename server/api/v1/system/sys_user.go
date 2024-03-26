@@ -149,7 +149,7 @@ func (b *BaseApi) Register(c *gin.Context) {
 		response.FailWithMessage(err.Error(), c)
 		return
 	}
-	err = utils.Verify(r, utils.RegisterVerify)
+	err = utils.Verify(r, utils.RegisterVerify) // 校验函数，传入校验数据与检验规则
 	if err != nil {
 		response.FailWithMessage(err.Error(), c)
 		return
